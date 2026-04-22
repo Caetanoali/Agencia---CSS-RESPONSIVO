@@ -1,9 +1,9 @@
-/* Configurações Globais e Variáveis */
+/* Principal */
 :root {
     --cor-fundo: #0a0a0a;
     --cor-card: #1a1a1a;
-    --cor-primaria: #8a4fff; /* Roxo principal */
-    --cor-secundaria: #6a35cc; /* Roxo escuro */
+    --cor-primaria: #8a4fff; 
+    --cor-secundaria: #6a35cc;
     --cor-texto: #ffffff;
     --cor-texto-suave: #b3b3b3;
     --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +26,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- Header e Navegação (Flexbox) --- */
+/* --- Header e Navegação --- */
 header {
     background-color: rgba(10, 10, 10, 0.95);
     padding: 1rem 5%;
@@ -64,7 +64,7 @@ header {
     color: var(--cor-primaria);
 }
 
-/* --- Home / Hero Section --- */
+/* --- Home --- */
 .cabecalho {
     height: 100vh;
     display: flex;
@@ -98,7 +98,7 @@ header {
     max-width: 500px;
 }
 
-/* --- Seção Serviços (CSS Grid) --- */
+/* --- Seção Serviços --- */
 .servico {
     padding: 80px 10%;
     background-color: #0f0f0f;
@@ -133,7 +133,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* --- SEÇÃO DEPOIMENTOS (Grid sem alterar HTML) --- */
+/* --- SEÇÃO DEPOIMENTOS (Grid) --- */
 .depoimentos {
     padding: 80px 10%;
     display: grid;
@@ -224,7 +224,7 @@ button[type="submit"]:hover {
 
 @media (max-width: 768px) {
     .menu {
-        display: none; /* Aqui você poderia implementar o menu hambúrguer */
+        display: none; 
     }
 
     .sobre {
