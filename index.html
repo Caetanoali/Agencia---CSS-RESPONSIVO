@@ -1,5 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <img src="./img/logotipoAgencia.jpg" alt="Logo" class="nav__logo">
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+                <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+                <li class="nav__item"><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+                <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero">
+            <h1 class="hero__title">Criamos experiências digitais que impactam</h1>
+            <p class="hero__description">Transformamos ideias em presença digital de alta performance. Nossa agência combina design estratégico e tecnologia de ponta para criar soluções personalizadas.</p>
+        </section>
+
+        <section id="sobre" class="about">
+            <img src="./img/imagemSobre.jpg" alt="Equipe da agência" class="about__image">
+            <div class="about__content">
+                <h2 class="about__title">Sobre</h2>
+                <p class="about__text">"Com 9 anos de experiência no mercado digital, nossa agência nasceu em 2018 com o propósito de unir design de elite e tecnologia funcional. De lá para cá, já ajudamos dezenas de empresas a escalarem seus resultados através de soluções web que realmente convertem."</p>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <h2 class="services__title">Serviços</h2>
+            <div class="services__grid">
+                <article class="service-card">
+                    <i class="fa-solid fa-swatchbook service-card__icon"></i>
+                    <h3 class="service-card__title">Design UI/UX</h3>
+                    <p class="service-card__description">Criamos interfaces modernas e intuitivas, focadas na melhor experiência para o seu usuário e na identidade visual da sua marca.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fa-brands fa-dev service-card__icon"></i>
+                    <h3 class="service-card__title">Desenvolvimento Web</h3>
+                    <p class="service-card__description">Construímos sites e landing pages de alta performance, utilizando as tecnologias mais atuais para garantir velocidade e segurança.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fa-solid fa-code service-card__icon"></i>
+                    <h3 class="service-card__title">Sistemas Sob Medida</h3>
+                    <p class="service-card__description">Desenvolvemos soluções personalizadas e integrações de API para automatizar processos e otimizar o dia a dia do seu negócio.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="testimonials">
+            <h2 class="testimonials__title">Depoimentos</h2>
+            <div class="testimonials__grid">
+                <article class="testimonial-card">
+                    <i class="fa-solid fa-comment-dots testimonial-card__icon"></i>
+                    <h3 class="testimonial-card__name">Ricardo Menezes</h3>
+                    <p class="testimonial-card__text">"Nossas vendas online cresceram mais de 40% nos primeiros dois meses após o lançamento do novo site. A equipe entendeu perfeitamente a jornada do nosso cliente."</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <i class="fa-solid fa-comment-dots testimonial-card__icon"></i>
+                    <h3 class="testimonial-card__name">Juliana Vasconcelos</h3>
+                    <p class="testimonial-card__text">"O que mais me impressionou foi a capacidade de traduzir a identidade da nossa marca em cada detalhe visual. O site ficou moderno e elegante."</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <i class="fa-solid fa-comment-dots testimonial-card__icon"></i>
+                    <h3 class="testimonial-card__name">André Lucas</h3>
+                    <p class="testimonial-card__text">"A entrega foi impecável e dentro do prazo. Além do design incrível, o código é limpo e a integração com nossas APIs foi feita sem erros."</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <h2 class="contact__title">Entre em Contato</h2>
+            <form action="" class="contact-form">
+                <div class="contact-form__group">
+                    <input type="text" class="contact-form__input" placeholder="Nome">
+                </div>
+                <div class="contact-form__group">
+                    <input type="email" class="contact-form__input" placeholder="Seu email">
+                </div>
+                <div class="contact-form__group">
+                    <textarea class="contact-form__textarea" placeholder="Digite sua Mensagem"></textarea>
+                </div>
+                <button type="submit" class="contact-form__button">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -124,4 +232,4 @@
 
 </body>
 
-</html>
+</html>-->

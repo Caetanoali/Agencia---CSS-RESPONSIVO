@@ -1,4 +1,265 @@
-/* Principal */
+:root {
+    --color-bg: #0a0a0a;
+    --color-bg-alt: #0f0f0f;
+    --color-card: #1a1a1a;
+    --color-primary: #8a4fff; 
+    --color-secondary: #6a35cc;
+    --color-text: #ffffff;
+    --color-text-muted: #b3b3b3;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    height: 3.5rem;
+}
+
+.nav__menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--color-primary);
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/imgfundo.png') center/cover;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+.hero__description {
+    color: var(--color-text-muted);
+    max-width: 700px;
+}
+
+/* About */
+.about {
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about__image {
+    width: 50%;
+    border-radius: 15px;
+    max-width: 500px;
+}
+
+.about__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Services */
+.services {
+    padding: 80px 10%;
+    background-color: var(--color-bg-alt);
+    text-align: center;
+}
+
+.services__title {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background-color: var(--color-card);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+}
+
+.service-card__icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.service-card__title {
+    margin-bottom: 10px;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.testimonials__title {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: var(--color-card);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    border-left: 5px solid var(--color-primary);
+}
+
+.testimonial-card__icon {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.testimonial-card__name {
+    margin-bottom: 10px;
+}
+
+.testimonial-card__text {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* Contact */
+.contact {
+    padding: 80px 10%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact__title {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form__input, 
+.contact-form__textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-card);
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-form__textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form__button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.contact-form__button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Footer */
+.footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #333;
+    color: var(--color-text-muted);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav__menu { display: none; }
+    .about { flex-direction: column; text-align: center; }
+    .about__image { width: 100%; }
+    .hero__title { font-size: 2.2rem; }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Principal 
 :root {
     --cor-fundo: #0a0a0a;
     --cor-card: #1a1a1a;
@@ -27,7 +288,7 @@ body {
 }
 
 /* --- Header e Navegação --- */
-header {
+/*header {
     background-color: rgba(10, 10, 10, 0.95);
     padding: 1rem 5%;
     position: fixed;
@@ -65,7 +326,7 @@ header {
 }
 
 /* --- Home --- */
-.cabecalho {
+/*.cabecalho {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -85,7 +346,7 @@ header {
 }
 
 /* --- Seção Sobre --- */
-.sobre {
+/*.sobre {
     padding: 100px 10%;
     display: flex;
     align-items: center;
@@ -99,7 +360,7 @@ header {
 }
 
 /* --- Seção Serviços --- */
-.servico {
+/*.servico {
     padding: 80px 10%;
     background-color: #0f0f0f;
     text-align: center;
@@ -107,7 +368,7 @@ header {
 
 .servico h2 { margin-bottom: 40px; font-size: 2.5rem; }
 
-/* Grid Responsivo */
+/* Grid Responsivo 
 .container-servicos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -133,7 +394,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* --- SEÇÃO DEPOIMENTOS (Grid) --- */
+/* --- SEÇÃO DEPOIMENTOS (Grid) --- 
 .depoimentos {
     padding: 80px 10%;
     display: grid;
@@ -170,7 +431,7 @@ header {
 }
 
 
-/* --- Formulário de Contato --- */
+/* --- Formulário de Contato --- 
 .contato {
     padding: 80px 10%;
     max-width: 800px;
@@ -212,7 +473,7 @@ button[type="submit"]:hover {
     background-color: var(--cor-secundaria);
 }
 
-/* --- Footer --- */
+/* --- Footer --- 
 .footer {
     padding: 40px;
     text-align: center;
@@ -220,7 +481,7 @@ button[type="submit"]:hover {
     color: var(--cor-texto-suave);
 }
 
-/* --- RESPONSIVIDADE (Media Queries) --- */
+/* --- RESPONSIVIDADE (Media Queries) --- 
 
 @media (max-width: 768px) {
     .menu {
@@ -241,9 +502,10 @@ button[type="submit"]:hover {
     }
 }
 
-/* Garantir que imagens não estourem o container */
+/* Garantir que imagens não estourem o container 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-}
+}*/
+
