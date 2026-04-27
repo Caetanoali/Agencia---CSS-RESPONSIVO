@@ -1,0 +1,157 @@
+@use 'variaveis';
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    &__link {
+        color: variaveis.$color-text;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    &__link:hover {
+        color: variaveis.$color-primary;
+    }
+}
+
+.services {
+    padding: 80px 10%;
+    background-color: variaveis.$color-bg-alt;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    &-card {
+        background-color: variaveis.$color-card;
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid #333;
+        transition: transform 0.3s, border-color 0.3s;
+    }
+
+    &-card:hover {
+        transform: translateY(-10px);
+        border-color: variaveis.$color-primary;
+    }
+
+    &-card__icon {
+        font-size: 2.5rem;
+        color: variaveis.$color-primary;
+        margin-bottom: 20px;
+    }
+
+    &-card__title {
+        margin-bottom: 10px;
+    }
+}
+
+.testimonials {
+    padding: 80px 10%;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    &-card {
+        background: variaveis.$color-card;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: left;
+        border-left: 5px solid variaveis.$color-primary;
+    }
+
+    &-card__icon {
+        color: variaveis.$color-primary;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    &-card__name {
+        margin-bottom: 10px;
+    }
+
+    &-card__text {
+        color: variaveis.$color-text-muted;
+        font-style: italic;
+    }
+}
+
+.contact {
+    padding: 80px 10%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: 15px;
+        background-color: variaveis.$color-card;
+        border: 1px solid #444;
+        color: white;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    &-form__textarea {
+        height: 150px;
+        resize: none;
+    }
+
+    &-form__button {
+        background-color: variaveis.$color-primary;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background 0.3s;
+    }
+
+    &-form__button:hover {
+        background-color: variaveis.$color-secondary;
+    }
+}

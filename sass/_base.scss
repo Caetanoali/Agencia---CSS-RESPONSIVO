@@ -1,0 +1,95 @@
+@use 'variaveis';
+@use 'mixins';
+
+@media (max-width: 768px) {
+    .nav__menu {
+        display: none;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about__image {
+        width: 100%;
+    }
+
+    .hero__title {
+        font-size: 2.2rem;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: variaveis.$color-bg-alt;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+body {
+    background-color: variaveis.$color-bg;
+    color: variaveis.$color-text;
+    font-family: variaveis.$font-main;  
+    @include mixins.espacamento;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/imgfundo.png') center/cover;
+
+    &__title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        max-width: 800px; //mixin ??
+    }
+
+    &__description {
+        color: variaveis.$color-text-muted;
+        max-width: 800px;
+    }
+}
+
+.about {
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    &__image {
+        width: 50%;
+        border-radius: 15px;
+        max-width: 500px;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
